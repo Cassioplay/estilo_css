@@ -1,0 +1,98 @@
+/* Reset básico */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilização do menu */
+nav {
+    background-color: #007BFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    color: white;
+    padding: 14px 20px;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.menu > li > a:hover {
+    background-color: #0056b3;
+}
+
+/* Submenu */
+.menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.menu li ul li a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.menu li ul li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostrar submenu ao passar o mouse */
+.menu > li:hover ul {
+    display: block;
+}
+
+/* Ajuste do submenu */
+.menu li ul li {
+    width: 180px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu > li > a {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu li ul {
+        position: static;
+        box-shadow: none;
+    }
+
+    .menu li ul li a {
+        padding: 8px 20px;
+    }
+}
